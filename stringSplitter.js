@@ -1,18 +1,15 @@
-function stringSplitter(string, seperator, arr=[]){
+'use strict';
 
-    if(string.indexOf(seperator) === -1) {
-        arr.push(string);
-        if(arr[arr.length-1] === '') arr.pop();
-        return arr;
+function splitString(str, separator) {
+    if (str.length === 0) {
+        return [];
     }
 
-    let seperatorIndex = string.indexOf(seperator);
-
-    let test = string.slice(0, seperatorIndex);
-
-    arr.push(test);
-
-    return stringSplitter(string.slice(seperatorIndex + 1), seperator, arr);
+    const index = str.indexOf(separator);
+    if (index === -1) {
+        return [str];
+    }
+    return [str.slice(0, index), ...splitString(str.slice(index + 1), separator)];
 }
 
-console.log(stringSplitter('te.s.t.', '.'));
+console.log(splitString('Hello.World..Thinkful.', '.'));
