@@ -8,7 +8,7 @@
 */
 
 function fib(num) {
-  if (num < 1) {
+  if (num <= 0) {
     return 0;
   }
 
@@ -20,4 +20,3 @@ function fib(num) {
 }
 
 console.log(fib(7));
-// TODO: PRINT SEQUENCE INSTEAD OF JUST NUMBER

@@ -7,18 +7,22 @@
     number / 2 = 0 | number % 2 = 1
 */
 
-function binaryRepresentation(num){
-  if(num === 0){ // if num is === 0
-    return '';
+function binaryRepresentation(num) {
+  // if (num === 0) { // if num is === 0
+  //   return '';
+  // }
+
+  // if (isNaN(num / num)) {
+  //   return 0; // if the number is zero 
+  // }
+
+  if (num > 0) {
+    let binary = Math.floor(num % 2); // binary string
+
+    return binaryRepresentation(Math.floor(num / 2)) + binary;// return binary
   }
 
-  if(isNaN(num/num)){
-    return 0; // if the number is zero 
-  }
-    
-  let binary = Math.floor(num%2); // binary string
-
-  return binaryRepresentation(Math.floor(num/2)) + binary;// return binary
+  return '';
 }
 
 console.log(binaryRepresentation(25));
