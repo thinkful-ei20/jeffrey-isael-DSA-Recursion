@@ -6,7 +6,7 @@ function nthTriangularNumber(num){
   return num + nthTriangularNumber(num-1);// eslint-disable-line no-console
 }
 
-console.log(nthTriangularNumber(2));
+console.log(nthTriangularNumber(1));
 console.log(nthTriangularNumber(3));
 console.log(nthTriangularNumber(7));
-console.log(nthTriangularNumber(10));
+console.log(nthTriangularNumber(9));
