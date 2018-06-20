@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 function countSheep(count) {
   if (count === 0) {
     return;
